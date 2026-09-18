@@ -14,9 +14,6 @@ const MODES: { id: ViewMode; label: string }[] = [
 
 const DURATIONS: TestDuration[] = [15, 30, 60];
 
-// TODO: เปลี่ยนเป็น URL repo ตัวจริงหลังอัปโหลด
-const REPO_URL = "https://github.com/your-username/texttyping";
-
 function App() {
   const [view, setView] = useState<ViewMode>("text");
   const [selectedId, setSelectedId] = useState(mockSnippets[0].id);
@@ -50,7 +47,7 @@ function App() {
         </h1>
 
         <a
-          href="https://github.com/Byffify/typing-practice"
+          href="https://github.com/Byffify/TypingPractice.git"
           target="_blank"
           rel="noopener noreferrer"
           className="text-sm text-slate-400 hover:text-cyan-300 inline-flex items-center gap-2"
