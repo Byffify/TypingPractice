@@ -1,25 +1,25 @@
 # Typing Practice
 
-แอปพลิเคชันฝึกพิมพ์ดีดความเร็วแบบเว็บเบราว์เซอร์ สร้างด้วย **React + TypeScript + Vite** รับแรงบันดาลใจจาก
-[Monkeytype](https://monkeytype.com/) โดยใช้ UI แบบข้อความซ้อนทับ (overlay) — พิมพ์ตรงไหน ตัวอักษรตรงนั้นจะเปลี่ยนเป็นสี
-**เขียว = พิมพ์ถูก**, **แดง = พิมพ์ผิด**
+A browser-based typing speed practice app built with **React + TypeScript + Vite**, inspired by
+[Monkeytype](https://monkeytype.com/). It uses an overlay UI — as you type, each character under the cursor is highlighted:
+**green = correct**, **red = incorrect**.
 
 ## Overview
 
-เว็บสำหรับวัดความเร็วและความแม่นยำในการพิมพ์ มี 2 โหมดหลัก:
+Measure your typing speed and accuracy with two main modes:
 
-- **Text** — สุ่มคำภาษาอังกฤษ (คำศัพท์ทั่วไป + คำศัพท์สาย dev เช่น `react`, `typescript`, `hook`) มาเรียงต่อกันเป็นข้อความ
-- **Code** — พิมพ์โค้ดจริงทีละบรรทัด เลือกภาษาที่ต้องการได้แก่ HTML / CSS / JavaScript / TypeScript (ตัวอย่าง Todo App)
+- **Text** — random English words (common vocabulary + dev-flavored words like `react`, `typescript`, `hook`) joined into a passage.
+- **Code** — type real code line by line, choosing from HTML / CSS / JavaScript / TypeScript (a Todo App example).
 
-เลือกเวลาทดสอบได้ 15 / 30 / 60 วินาที จับเวลาเริ่มอัตโนมัติเมื่อพิมพ์ตัวแรก พิมพ์ครบหรือเวลาหมดจะสรุปผลลัพธ์เป็น
-**WPM** และ **ความแม่นยำ (%)** พร้อมปุ่มลองใหม่
+Pick a test duration of 15 / 30 / 60 seconds. The timer starts automatically on your first keystroke; when you finish
+the target or time runs out, results are shown as **WPM** and **accuracy (%)**, with a "try again" button.
 
 ## Tech Stack
 
-| เทคโนโลยี                    | ใช้ทำอะไร                                                      |
-| ---------------------------- | -------------------------------------------------------------- |
-| [React](https://react.dev) 19        | สร้าง UI ด้วย components และ hooks                        |
-| [TypeScript](https://www.typescriptlang.org) | กำหนด types สำหรับโหมดการทดสอบ, ระยะเวลา, โค้ด snippet และผลลัพธ์ |
-| [Vite](https://vite.dev)    | Dev server และ build tool                                     |
-| [Tailwind CSS](https://tailwindcss.com) 4 | ตกแต่ง UI ด้วย utility classes และ CSS variables     |
-| [React Icons](https://react-icons.github.io/react-icons) | ไอคอน e.g. ปุ่มลิงก์ GitHub          |
+| Technology | Purpose |
+| --- | --- |
+| [React](https://react.dev) 19 | UI built from components and hooks |
+| [TypeScript](https://www.typescriptlang.org) | Types for test mode, duration, code snippets, and results |
+| [Vite](https://vite.dev) | Dev server and build tool |
+| [Tailwind CSS](https://tailwindcss.com) 4 | Styling via utility classes and CSS variables |
+| [React Icons](https://react-icons.github.io/react-icons) | Icons, e.g. the GitHub link button |
