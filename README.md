@@ -1,77 +1,25 @@
-# React + TypeScript + Vite
+# Typing Practice
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+แอปพลิเคชันฝึกพิมพ์ดีดความเร็วแบบเว็บเบราว์เซอร์ สร้างด้วย **React + TypeScript + Vite** รับแรงบันดาลใจจาก
+[Monkeytype](https://monkeytype.com/) โดยใช้ UI แบบข้อความซ้อนทับ (overlay) — พิมพ์ตรงไหน ตัวอักษรตรงนั้นจะเปลี่ยนเป็นสี
+**เขียว = พิมพ์ถูก**, **แดง = พิมพ์ผิด**
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+เว็บสำหรับวัดความเร็วและความแม่นยำในการพิมพ์ มี 2 โหมดหลัก:
 
-## React Compiler
+- **Text** — สุ่มคำภาษาอังกฤษ (คำศัพท์ทั่วไป + คำศัพท์สาย dev เช่น `react`, `typescript`, `hook`) มาเรียงต่อกันเป็นข้อความ
+- **Code** — พิมพ์โค้ดจริงทีละบรรทัด เลือกภาษาที่ต้องการได้แก่ HTML / CSS / JavaScript / TypeScript (ตัวอย่าง Todo App)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+เลือกเวลาทดสอบได้ 15 / 30 / 60 วินาที จับเวลาเริ่มอัตโนมัติเมื่อพิมพ์ตัวแรก พิมพ์ครบหรือเวลาหมดจะสรุปผลลัพธ์เป็น
+**WPM** และ **ความแม่นยำ (%)** พร้อมปุ่มลองใหม่
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
-
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
-"# TypingPractice" 
-"# TypingPractice" 
+| เทคโนโลยี                    | ใช้ทำอะไร                                                      |
+| ---------------------------- | -------------------------------------------------------------- |
+| [React](https://react.dev) 19        | สร้าง UI ด้วย components และ hooks                        |
+| [TypeScript](https://www.typescriptlang.org) | กำหนด types สำหรับโหมดการทดสอบ, ระยะเวลา, โค้ด snippet และผลลัพธ์ |
+| [Vite](https://vite.dev)    | Dev server และ build tool                                     |
+| [Tailwind CSS](https://tailwindcss.com) 4 | ตกแต่ง UI ด้วย utility classes และ CSS variables     |
+| [React Icons](https://react-icons.github.io/react-icons) | ไอคอน e.g. ปุ่มลิงก์ GitHub          |
